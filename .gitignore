@@ -140,3 +140,6 @@ dist
 **/node_modules/
 **/build/
 **/docs
+
+#Larissa local ignores
+.README_LB.md

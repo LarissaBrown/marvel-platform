@@ -19,6 +19,15 @@ const Slides = () => {
   const [revealLoaded, setRevealLoaded] = useState(false);
   const revealRef = useRef(null);
 
+//   const handleContentChange = (index, newContent) => {
+//   setPresentationData((prevData) => {
+//     const updatedData = [...prevData];
+//     updatedData[index].content = newContent;
+//     return updatedData;
+//   });
+// };
+
+
   useEffect(() => {
     // Get presentation data from sessionStorage
     const storedData = sessionStorage.getItem('presentationData');
@@ -274,6 +283,7 @@ const Slides = () => {
             title={title}
             subtitle={subtitle}
             imageUrl={imageUrl}
+            
           />
         );
       case 'titleBodyImage':
@@ -283,6 +293,7 @@ const Slides = () => {
             title={title}
             content={content}
             imageUrl={imageUrl}
+            
           />
         );
       case 'titleBulletsImage':
@@ -292,6 +303,7 @@ const Slides = () => {
             title={title}
             content={content}
             imageUrl={imageUrl}
+            
           />
         );
       case 'twoColumnImage':
@@ -302,6 +314,7 @@ const Slides = () => {
             leftContent={leftContent}
             rightContent={rightContent}
             imageUrl={imageUrl}
+            
           />
         );
       case 'stretchImage':
@@ -311,6 +324,7 @@ const Slides = () => {
             title={title}
             caption={caption}
             imageUrl={imageUrl}
+            
           />
         );
 

@@ -1,50 +1,40 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
-import SlideEditor from '../../../tools/components/SlideEditor/SlideEditor';
+
 import { styles } from '../styles';
 
+import SlideContentEditor from '@/tools/components/ToolEditor/SlideContentEditor/SlideContentEditor';
+import SlideImageEditor from '@/tools/components/ToolEditor/SlideImageEditor/SlideImageEditor';
+import SlideTitleEditor from '@/tools/components/ToolEditor/SlideTitleEditor/SlideTitleEditor';
+
 const TitleBodyImageSlide = ({ title, content, imageUrl }) => {
-  const defaultImage = 'https://picsum.photos/800/400';
-  const [editableContent, setEditableContent] = useState(content);
-  const [showImage, setShowImage] = useState(true); // State to toggle image visibility
+  const [editableContent, setEditableContent] = useState(content || ''); // Ensure content is never null/undefined
+  const [editableTitle, setEditableTitle] = useState(title || '');
 
   return (
     <article style={styles.slide.container}>
       <div style={styles.slide.content}>
-        <h2 style={styles.slide.title}>{title}</h2>
-
-        {/* Toggle Switch for Layout Change */}
-        <div style={styles.slide.toggleContainer}>
-          <label style={styles.slide.toggleLabel}>
-            <input 
-              type="checkbox" 
-              checked={showImage} 
-              onChange={() => setShowImage(!showImage)}
-              style={styles.slide.toggleInput}
-            />
-            Show Image
-          </label>
-        </div>
-
+        <SlideTitleEditor
+          style={styles.slide.title}
+          title={
+            Array.isArray(editableTitle) ? editableTitle[0] : editableTitle
+          }
+          onChange={setEditableTitle}
+        />
         <div style={styles.slide.flexContainer}>
           <div style={styles.slide.textColumn}>
-            <SlideEditor 
-              style={styles.slide.body} 
-              content={Array.isArray(editableContent) ? editableContent[0] : editableContent} 
-              onChange={setEditableContent} 
+            <SlideContentEditor
+              content={
+                Array.isArray(editableContent)
+                  ? editableContent[0]
+                  : editableContent
+              }
+              onChange={setEditableContent}
             />
           </div>
-
-          {/* Conditionally Render Image */}
-          {showImage && (
-            <div style={styles.slide.imageColumn}>
-              <img 
-                src={imageUrl || defaultImage} 
-                alt={title} 
-                style={styles.slide.contentImage} 
-              />
-            </div>
-          )}
+          <div style={styles.slide.imageColumn}>
+            <SlideImageEditor src={imageUrl} />
+          </div>
         </div>
       </div>
     </article>

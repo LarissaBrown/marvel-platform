@@ -1,0 +1,38 @@
+{
+    "nature": [
+      "https://picsum.photos/800/600?random=1",
+      "https://source.unsplash.com/800x600/?nature,water",
+      "https://source.unsplash.com/800x600/?forest,mountains",
+      "https://source.unsplash.com/800x600/?sky,clouds",
+      "https://source.unsplash.com/800x600/?desert,sand"
+    ],
+    "technology": [
+      "https://source.unsplash.com/800x600/?technology,coding",
+      "https://source.unsplash.com/800x600/?computer,software",
+      "https://source.unsplash.com/800x600/?AI,robot",
+      "https://source.unsplash.com/800x600/?cybersecurity,hacker",
+      "https://source.unsplash.com/800x600/?server,data"
+    ],
+    "education": [
+      "https://source.unsplash.com/800x600/?books,library",
+      "https://source.unsplash.com/800x600/?classroom,learning",
+      "https://source.unsplash.com/800x600/?students,university",
+      "https://source.unsplash.com/800x600/?writing,study",
+      "https://source.unsplash.com/800x600/?lecture,teacher"
+    ],
+    "abstract": [
+      "https://source.unsplash.com/800x600/?abstract,colors",
+      "https://source.unsplash.com/800x600/?art,design",
+      "https://source.unsplash.com/800x600/?patterns,textures",
+      "https://source.unsplash.com/800x600/?light,shadow",
+      "https://source.unsplash.com/800x600/?surreal,dream"
+    ],
+    "business": [
+      "https://source.unsplash.com/800x600/?business,meeting",
+      "https://source.unsplash.com/800x600/?finance,stocks",
+      "https://source.unsplash.com/800x600/?strategy,planning",
+      "https://source.unsplash.com/800x600/?teamwork,office",
+      "https://source.unsplash.com/800x600/?growth,success"
+    ]
+  }
+  

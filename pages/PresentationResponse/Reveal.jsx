@@ -44,6 +44,9 @@ const Reveal = () => {
       </Head>
 
       <div className="presentation-container">
+
+{/* DnD Slides */}
+
         <Slides />
       </div>
     </>

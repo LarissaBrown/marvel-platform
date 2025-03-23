@@ -8,7 +8,7 @@ import submitPrompt from '@/tools/libs/services/submitPrompt';
 const PresentationOutline = () => {
   const { response } = useSelector((state) => state.tools);
   const { data: userData } = useSelector((state) => state.user);
-  // console.log(response);
+  console.log('Presentation Outline', response);
   const [selectedOutline, setSelectedOutline] = useState(null);
   const router = useRouter();
 
